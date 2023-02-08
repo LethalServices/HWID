@@ -14,8 +14,8 @@ print(Fore.LIGHTMAGENTA_EX+'     ╚══════╝╚══════�
 print(Fore.LIGHTCYAN_EX+'        TOS: Lethal Holds No Responsibility At ALL!         '.center(width))
 print(Fore.WHITE+f'           Version: Beta 1.6 | https://lethal.ml            '.center(width))
 
-replacesetting = input(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Would you like to enable LCTRL + LSHIFT + I(y/n): ')
-installgit = input(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Would you like to install git for windows(y/n): ')
+replacesetting = input(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Would you like to enable LCTRL + LSHIFT + I for discord? (y/n): ')
+installgit = input(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Would you like to install git for windows? (y/n): ')
 
 if replacesetting == 'y':
     if os.path.isfile(f"{os.getenv('APPDATA')}\\discord\\settings.json"):
@@ -43,4 +43,4 @@ else:
 
 print(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Your HWID: {wmi.WMI().Win32_ComputerSystemProduct()[0].UUID}')  
 print(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Copy & Paste The Your HWID Into The Ticket')
-k=input(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Press Close To Exit')
+Exit=input(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Press any key to exit')
