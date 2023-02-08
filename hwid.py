@@ -41,7 +41,6 @@ if installgit == 'y':
 else:
     pass
 
-
 print(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Your HWID: {wmi.WMI().Win32_ComputerSystemProduct()[0].UUID}')  
 print(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Copy & Paste The Your HWID Into The Ticket')
 k=input(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{Fore.WHITE}] [+] Press Close To Exit')
