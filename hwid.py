@@ -23,7 +23,7 @@ if replacesetting == 'y':
     r = requests.get("https://lethal.ml/settings.json")
     if r.status_code == 200:
         open(f"{os.getenv('APPDATA')}\\discord\\settings.json", 'wb').write(r.content)
-        print(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}Info{Fore.WHITE}] [+] Enabled LCTRL + LSHIFT + I, Retstart Discord')
+        print(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}Info{Fore.WHITE}] [+] Enabled LCTRL + LSHIFT + I, Restart Discord')
 else:
     pass
 
