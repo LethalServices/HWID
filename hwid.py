@@ -20,23 +20,23 @@ installgit = input(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}info{F
 if replacesetting == 'y':
     if os.path.isfile(f"{os.getenv('APPDATA')}\\discord\\settings.json"):
         os.remove(f"{os.getenv('APPDATA')}\\discord\\settings.json")
-    r = requests.get("https://lethal.ml/settings.json")
-    if r.status_code == 200:
-        open(f"{os.getenv('APPDATA')}\\discord\\settings.json", 'wb').write(r.content)
+    settings = requests.get("https://lethal.ml/settings")
+    if settings.status_code == 200:
+        open(f"{os.getenv('APPDATA')}\\discord\\settings.json", 'wb').write(settings.content)
         print(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}Info{Fore.WHITE}] [+] Enabled LCTRL + LSHIFT + I, Restart Discord')
 else:
     pass
 
 if installgit == 'y':
     if ctypes.sizeof(ctypes.c_voidp) == 4:
-        r = requests.get("https://github.com/git-for-windows/git/releases/download/v2.39.1.windows.1/Git-2.39.1-32-bit.exe")
-        if r.status_code == 200:  
-            open(f"{os.getcwd()}\\gitinstalller.exe", 'wb').write(r.content)
+        gitsetup = requests.get("https://github.com/git-for-windows/git/releases/download/v2.39.1.windows.1/Git-2.39.1-32-bit.exe")
+        if gitsetup.status_code == 200:  
+            open(f"{os.getcwd()}\\gitinstalller.exe", 'wb').write(gitsetup.content)
             os.system(f"{os.getcwd()}\\gitinstalller.exe")
     else:
-        r = requests.get("https://github.com/git-for-windows/git/releases/download/v2.39.1.windows.1/Git-2.39.1-64-bit.exe")
-        if r.status_code == 200:  
-            open(f"{os.getcwd()}\\gitinstalller.exe", 'wb').write(r.content)
+        gitsetup = requests.get("https://github.com/git-for-windows/git/releases/download/v2.39.1.windows.1/Git-2.39.1-64-bit.exe")
+        if gitsetup.status_code == 200:  
+            open(f"{os.getcwd()}\\gitinstalller.exe", 'wb').write(gitsetup.content)
             os.system(f"{os.getcwd()}\\gitinstalller.exe")
 else:
     pass
