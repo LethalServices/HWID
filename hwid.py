@@ -40,7 +40,7 @@ def get_discord_settings_json():
     if replacesetting == 'y':
         if os.path.isfile(f"{os.getenv('APPDATA')}\\discord\\settings.json"):
             os.remove(f"{os.getenv('APPDATA')}\\discord\\settings.json")                 
-            get_download_json('https://lethals.org/settings', 'settings.json')
+            get_download_json('https://lethals.org/api/settings', 'settings.json')
             print(f'[{datetime.now().strftime("%H:%M:%S")}] [{Fore.GREEN}Info{Fore.WHITE}] [+] Enabled LCTRL + LSHIFT + I, Restart Discord')
     else:
         pass
